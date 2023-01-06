@@ -12,9 +12,30 @@
     </p>
   </div>
   <div>
-  <div class="color green" ></div>
-  <div class="color red" ></div>
-  <div class="color blue" ></div>
+  <div class="color green" id="vert" ></div>
+  <div class="color red" id="rouge" ></div>
+  <div class="color blue" id="bleu"></div>
 </div>
 </body>
+<script>
+  let vert = document.getElementById("vert");
+    let rouge = document.getElementById("rouge");
+    let bleu = document.getElementById("bleu");
+
+    let d1 = document.getElementById("text");
+ 
+    vert.addEventListener("click", () => {
+     document.getElementById("text").style.color = "green";
+    })
+
+    rouge.addEventListener("click", () => {
+     document.getElementById("text").style.color = "red";
+    })
+    
+    bleu.addEventListener("click", () => {
+     document.getElementById("text").style.color = "blue";
+    })
+  
+  
+</script>
 </html>

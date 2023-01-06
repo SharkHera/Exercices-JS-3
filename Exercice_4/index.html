@@ -8,7 +8,24 @@
   <form>
     <label for="password">Votre mot de passe : </label><input type="text" name="password" id="password" />
     <label for="confirmPassword">Confirmez : </label><input type="text" name="confirmPassword" id="confirmPassword" />
-    <button type="button" name="button" >Vérification</button>
+    <button type="button" name="button" onclick="verification()">Vérification</button>
   </form>
 </body>
+<script>
+  //definir var
+  let pass = document.getElementById("password")
+  let conf = document.getElementById("confirmPassword")
+
+  //fonction vérification
+  function verification() {
+    if (pass.value != conf.value) {
+        document.getElementById("password").style.border = "3px solid Red";
+        document.getElementById("confirmPassword").style.border = "3px solid Red";
+      } else if (pass.value === conf.value ){
+        document.getElementById("password").style.border = "3px solid Green";
+        document.getElementById("confirmPassword").style.border = "3px solid Green";
+      }
+    }
+  
+</script>
 </html>
